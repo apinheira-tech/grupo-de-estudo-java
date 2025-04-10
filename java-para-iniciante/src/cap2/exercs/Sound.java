@@ -1,5 +1,11 @@
 package cap2.exercs;
 
+/*
+@Description: Exercicio que calcula a distancia em pés e metros
+Atividades do capítulo 2 - Introdução a tipos de dados e Operadores
+Livro: Java para Iniciantes - Herbert Schildt
+@Author: Grupo de Estudos sobre Java
+*/
 
 public class Sound {
     public Sound() {

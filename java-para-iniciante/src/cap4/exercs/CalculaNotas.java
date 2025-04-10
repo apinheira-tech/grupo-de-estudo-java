@@ -1,12 +1,16 @@
 package cap4.exercs;
 
 /*
-@author: Simone
+@author: Simone (Grupo de Estudos sobre Java)
 @version: 1.0
 @since: 2023-10-01
+@Artefato: CalculaNotas.java
+Atividades do capítulo 4 - Introdução a classes, objetos e métodos
+Livro: Java para Iniciantes - Herbert Schildt
 @description: Esta classe contém um método que calcula a média de notas de um aluno.
 Classe que demonstra uma função com Retorno (Return) para calcular a média de notas.
- */
+*/
+
 public class CalculaNotas {
     // Método para calcular a média entre 3 notas
     /*

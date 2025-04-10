@@ -1,5 +1,21 @@
 package cap5.exercs;
 
+/*
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since:
+@Artefato: ShowBitsDemos.java
+Atividades do capítulo 5 - Tipos de Dados e Operadores
+Livro: Java para Iniciantes - Herbert Schildt
+@description:
+    Mostra como criar um objeto ShowBits.
+    Mostra como usar o método show() para exibir o valor em binário.
+    Mostra como usar o operador & para exibir o valor em binário.
+    Mostra como usar o operador >>> para exibir o valor em binário.
+    Mostra como usar o operador << para exibir o valor em binário.
+    Mostra como usar o operador | para exibir o valor em binário.
+    Mostra como usar o operador ^ para exibir o valor em binário.
+*/
 public class ShowBitsDemos {
     public static void main(String[] args) {
         ShowBits b = new ShowBits(8);

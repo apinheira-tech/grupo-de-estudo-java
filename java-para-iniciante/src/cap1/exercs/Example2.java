@@ -1,9 +1,12 @@
 package cap1.exercs;
 
 /*
-@Description:
-  Este código demostra uma variável.
+@Description: Este código demostra uma variável.
+Atividades do capítulo 1 - Fundamentos da Liguagem Java
+Livro: Java para Iniciantes - Herbert Schildt
+@Author: Grupo de Estudos sobre Java
  */
+
 public class Example2 {
     public static void main(String[] args) {
         // Declaração das variáveis

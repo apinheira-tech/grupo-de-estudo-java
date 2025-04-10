@@ -2,7 +2,12 @@ package cap3.exercs;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+/*
+@Description: Exercicio sobre Estruturas de Controle com Case
+Atividades do capítulo 3 - Instruções de controle
+Livro: Java para Iniciantes - Herbert Schildt
+@Author: Simone (Grupo de Estudos sobre Java)
+*/
 public class Help {
     public Help() {
     }

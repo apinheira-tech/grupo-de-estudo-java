@@ -1,4 +1,18 @@
 package cap7.exercs;
+/*
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since:
+@Artefato: PessoaN.java
+Atividades do capítulo 7 - Herança
+Livro: Java para Iniciantes - Herbert Schildt
+@description: Exemplificando o conceito de Herança. Esta eh a subclasse
+               Esta classe herda os métodos e atributos da superclasse Pessoa
+               Implementa o método abstrato cantar da superclasse
+               Métodos: Tem métodos específicos, como : falar, informacoes e comer, que não são
+               da superclasse.
+               Atributos: tem o atributo etnia, que não é da superclasse
+*/
 
 // Classe filha (ou subclasse): PessoaN
 public class PessoaN extends Pessoa{

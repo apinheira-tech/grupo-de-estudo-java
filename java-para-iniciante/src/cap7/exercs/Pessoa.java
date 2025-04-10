@@ -1,11 +1,15 @@
 package cap7.exercs;
 
 /*
-@author: Simone
-@Code: esta eh a superclasse
-Este método abstract
- */
-
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since:
+@Artefato: Pessoa.java
+Atividades do capítulo 7 - Herança
+Livro: Java para Iniciantes - Herbert Schildt
+@description: Exemplificando o conceito de Herança. Esta eh a superclasse
+              Este método abstract
+*/
 public abstract class Pessoa {
     // Atributo da superclasses
     protected String nome;

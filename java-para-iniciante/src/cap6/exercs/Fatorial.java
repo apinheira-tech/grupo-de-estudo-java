@@ -1,7 +1,13 @@
 package cap6.exercs;
 /*
-Fatorial - para aprender recurssão
-Eh a multiplicação da sequencia de numeros
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since:
+@Artefato: Fatorial.java
+Atividades do capítulo 6 - Métodos e Classes
+Livro: Java para Iniciantes - Herbert Schildt
+@description: Fatorial - para aprender recurssão
+              Eh a multiplicação da sequencia de numeros inteiros positivos
  */
 public class Fatorial {
 

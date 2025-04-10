@@ -1,4 +1,14 @@
 package cap4.exercs;
+/*
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since: 2023-10-01
+@Artefato: Pessoa.java
+Atividades do capítulo 4 - Introdução a classes, objetos e métodos
+Livro: Java para Iniciantes - Herbert Schildt
+@description: Esta classe representa uma pessoa com atributos (variáveis) e métodos (comportamento e características).
+E que demonstra os conceitos de encapsulamento, herança, polimorfismo e abstração.
+*/
 
 // ABSTRAÇÃO: Representa uma pessoa com atributos (variáveis) e métodos (comportamento e características).
 public class Pessoa {

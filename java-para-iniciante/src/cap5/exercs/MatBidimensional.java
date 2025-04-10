@@ -1,5 +1,16 @@
 package cap5.exercs;
-
+/*
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since:
+@Artefato: MatBidimensional.java
+Atividades do capítulo 5 - Tipos de Dados e Operadores
+Livro: Java para Iniciantes - Herbert Schildt
+@description:
+    Exemplo de matriz bidimensional.
+    Demonstra o uso de matrizes bidimensionais.
+    Mostra como preencher a matriz com números aleatórios.
+*/
 // Explicação de uma matriz Bidimensiona
 public class MatBidimensional {
     public static void main(String[] args) {

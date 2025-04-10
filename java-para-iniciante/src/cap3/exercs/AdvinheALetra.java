@@ -2,6 +2,12 @@ package cap3.exercs;
 
 import java.io.IOException;
 
+/*
+@Description: Exercicio sobre Estruturas de Controle com While
+Atividades do capítulo 3 - Instruções de controle
+Livro: Java para Iniciantes - Herbert Schildt
+@Author: Simone (Grupo de Estudos sobre Java)
+*/
 public class AdvinheALetra {
     public AdvinheALetra() {
     }
