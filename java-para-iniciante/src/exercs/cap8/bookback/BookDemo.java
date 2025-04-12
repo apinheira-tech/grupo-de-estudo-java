@@ -1,11 +1,11 @@
 package exercs.cap8.bookback;
 
-import java.awt.print.Book;
+
 
 public class BookDemo {
     public static void main(String[] args) {
         // Criação de um objeto Book
-        Book books = new Book[5];
+        Book books[] = new Book[5];
 
         books[0] = new Book("Java: Como Programar", "Deitel", 2000);
         books[1] = new Book("Java Para Iniciantes", "Schild", 2014);
@@ -21,6 +21,12 @@ public class BookDemo {
             System.out.println("Ano: " + books[i].getYear());
             System.out.println();
             books[i].show();*/
+
+            /*problema causado pela importação da biblioteca Book do java
+            import java.awt.print.Book;
+
+            na linha 8, faltou a declaração de array em book
+            * */
         }
     }
 }
