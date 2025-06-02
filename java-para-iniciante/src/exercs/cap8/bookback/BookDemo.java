@@ -1,6 +1,19 @@
 package exercs.cap8.bookback;
 
+/*
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since: 12/04/2025 (Dt de quando implementei essa classe no GE)
+@Artefato: BookDemo.java
+Atividades do capítulo 8 - Packages e Interfaces
+Livro: Java para Iniciantes - Herbert Schildt
+@description: Exemplificando o conceito de Packages e Interfaces.
+                Esta eh a classe BookDemo, que demonstra o uso da classe Book.
+                Cria um array de objetos Book e exibe os detalhes de cada livro.
+                Métodos: Tem o método main que cria e exibe os livros.
+                Atributos: Não possui atributos próprios, mas utiliza a classe Book.
 
+*/
 
 public class BookDemo {
     public static void main(String[] args) {

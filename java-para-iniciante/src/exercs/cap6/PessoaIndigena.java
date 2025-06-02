@@ -12,4 +12,8 @@ Livro: Java para Iniciantes - Herbert Schildt
 */
 public class PessoaIndigena extends Pessoa {
     private String PovosNativos;
+    // Construtor
+    public PessoaIndigena(String nome, int idade, String escolaridade) {
+        super(nome, idade, escolaridade);
+    }
 }

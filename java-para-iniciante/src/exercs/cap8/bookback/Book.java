@@ -1,5 +1,18 @@
 package exercs.cap8.bookback;
 
+/*
+@author: Simone (Grupo de Estudos sobre Java)
+@version: 1.0
+@since: 12/04/2025 (Dt de quando implementei essa classe no GE)
+@Artefato: Book.java
+Atividades do capítulo 8 - Packages e Interfaces
+Livro: Java para Iniciantes - Herbert Schildt
+@description: Exemplificando o conceito de Packages e Interfaces.
+                Esta eh a classe Book, que representa um livro.
+                Possui atributos como título, autor e data de lançamento.
+                Métodos: Tem métodos getters e setters para acessar e modificar os atributos.
+                Atributos: tem os atributos title, author e sices (data de lançamento).
+*/
 class Book {
     private String title;
     private String author;

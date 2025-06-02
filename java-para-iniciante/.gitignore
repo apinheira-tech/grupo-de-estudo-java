@@ -7,5 +7,11 @@
 /dataSources/
 /dataSources.local.xml
 
+# Ingore all files in the following directories
+*.iml
+*.idea/
+src/
+/out/
+
 *.iml
 *.idea/
