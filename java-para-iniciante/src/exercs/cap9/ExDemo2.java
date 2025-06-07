@@ -1,0 +1,19 @@
+package exercs.cap9;
+
+public class ExDemo2 {
+    public static void main(String[] args) {
+        int nums[] = {4, 8, 16, 32, 64, 128, 256};
+        int denom[] = {2, 0, 4, 8, 0, 16, 32};
+
+        // Gera uma exceção de índice fora os limites do array
+        for(int i=0; i<nums.length; i++) {
+            try {
+                System.out.println("é nums[ " + nums[i] +
+                                    "] / é denom[ " + denom[i] +
+                                    "] = é " + nums[i] / denom[i]);
+            } catch (ArithmeticException e) {
+                System.out.println("Exceção capturada: Divisão por zero. | Exception caught: Division by zero.");
+            }
+        }
+    }
+}
