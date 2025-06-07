@@ -31,6 +31,7 @@ public class TrafficSimulator implements Runnable{
     }
 
     // Inicia a simulação do semáforo.
+    @Override
     public void run() {
         while (!stop) {
             try {
@@ -42,14 +43,13 @@ public class TrafficSimulator implements Runnable{
             // Muda a cor do semáforo
             switch (color) {
                 case RED:
-                    // RED por 12 segundos
-                    Thread.sleep(12000); // Espera 12 segundos
+                    Thread.sleep(color.delay);
                     break;
                 case GREEN:
-                    Thread.sleep(10000); // VERDE Espera 10 segundos
+                    Thread.sleep(color.delay);
                     break;
                 case YELLOW:
-                    Thread.sleep(2000); // AMARELO Espera 2 segundos
+                    Thread.sleep(color.delay);
                     break;
             }
                 changeColor();
@@ -58,7 +58,7 @@ public class TrafficSimulator implements Runnable{
                 //System.out.println("Thread interrupted: " + e.getMessage());
                 System.out.println("Thread Interrompida: " + exc);
             }
-                   }
+       }
     }
 
     // Muda a cor do semáforo
@@ -84,14 +84,17 @@ public class TrafficSimulator implements Runnable{
     * Espera até uma mudança de sinal ocorrer.
     */
     synchronized void waitForChange() {
-        while (!changed) {
-            try {
+       try {
+            while (!changed) {
                 wait(); // Espera até que a cor mude
-                changed = false;
-            } catch (InterruptedException exc) {
-                System.out.println("Thread interrupted: " + exc.getMessage());
             }
+            changed = false;
+        } catch (InterruptedException exc) {
+            System.out.println("Thread interrupted: " + exc.getMessage());
         }
+    }
+
+
         // Retorna a cor atual do semáforo
         synchronized ColorEnum getColor(){
             return color;
@@ -105,18 +108,4 @@ public class TrafficSimulator implements Runnable{
             stop = true; // Define a flag de parada como verdadeira
         }
     }
-    /**
-     * Classe de demostracao
-     */
-    /
-    public static class TrafficDemo {
-        public static void main(String[] args) {
-            TrafficSimulator ts = new TrafficSimulator(ColorEnum.GREEN);
-            for (int i = 0; i < 9; i++) {
-                ts.waitForChange(); // Espera por uma mudança de cor
-                System.out.println("Cor atual: " + ts.getColor()); // Exibe a cor atual
-            }
-            ts.cancel(); // Interrompe a simulação
-        }
-    }
-}
+
