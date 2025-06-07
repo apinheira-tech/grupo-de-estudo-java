@@ -8,7 +8,7 @@ package exercs.cap12.trafficsimulator;
     * Semágoro computadorizado.
     * @author: Simone - @apinheira-tech
  */
-public class TrafficSimulator {
+public class TrafficSimulator implements Runnable{
     // Contém a thread que executa a simulação do semáforo.
     private Thread thrd;
     // Contém a cor atual do semáforo.
@@ -19,7 +19,7 @@ public class TrafficSimulator {
     // True quando o sinal mudou
     private boolean changed = false;
 
-    TrafficSimulator(TrafficSimulator init) {
+    TrafficSimulator(ColorEnum init) {
         color = init;
         thrd = new Thread(this);
         thrd.start();
@@ -44,24 +44,21 @@ public class TrafficSimulator {
                 case RED:
                     // RED por 12 segundos
                     Thread.sleep(12000); // Espera 12 segundos
-                    color = ColorEnum.RED;
                     break;
                 case GREEN:
                     Thread.sleep(10000); // VERDE Espera 10 segundos
-                    color = ColorEnum.GREEN;
                     break;
                 case YELLOW:
                     Thread.sleep(2000); // AMARELO Espera 2 segundos
-                    color = ColorEnum.YELLOW;
                     break;
             }
+                changeColor();
            /* changed = true; // Indica que a cor mudou*/
         } catch (InterruptedException exc) {
                 //System.out.println("Thread interrupted: " + e.getMessage());
-                System.out.println(exc);
+                System.out.println("Thread Interrompida: " + exc);
             }
-            changeColor();
-        }
+                   }
     }
 
     // Muda a cor do semáforo
@@ -79,7 +76,7 @@ public class TrafficSimulator {
                 break;
         }
         changed = true; // Indica que a cor mudou
-        notify(); // Sinaliza que a cor mudou
+        notify(); // Notifica qualquer thread esperando a mudança
     }
 
     /*
@@ -96,7 +93,7 @@ public class TrafficSimulator {
             }
         }
         // Retorna a cor atual do semáforo
-        synchronized ColorEnum getColor() {
+        synchronized ColorEnum getColor(){
             return color;
         }
         /*changed = false; // Reseta o estado de mudança*/
@@ -108,7 +105,11 @@ public class TrafficSimulator {
             stop = true; // Define a flag de parada como verdadeira
         }
     }
-    class TrafficDemo {
+    /**
+     * Classe de demostracao
+     */
+    /
+    public static class TrafficDemo {
         public static void main(String[] args) {
             TrafficSimulator ts = new TrafficSimulator(ColorEnum.GREEN);
             for (int i = 0; i < 9; i++) {
