@@ -47,7 +47,6 @@ public class TrafficSimulator implements Runnable{
                 case RED:
                     // RED por 12 segundos
                     Thread.sleep(12000); // Espera 12 segundos
-                    //solultion: Thread.sleep(color.delay);
                     break;
                 case GREEN:
                     Thread.sleep(10000); // VERDE Espera 10 segundos
