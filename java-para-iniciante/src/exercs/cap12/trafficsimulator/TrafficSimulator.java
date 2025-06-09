@@ -5,7 +5,9 @@ package exercs.cap12.trafficsimulator;
     *
     * This class represents a traffic simulator that manages the state of a traffic light.
     * It uses a thread to simulate the changing of the traffic light color.
-    * Semágoro computadorizado.
+    * Esta classe representa um simulador de tráfego que gerencia o estado de um semáforo.
+    * Utiliza uma thread para simular a mudança de cor do semáforo.
+    * Semáforo computadorizado.
     * @author: Simone - @apinheira-tech
  */
 public class TrafficSimulator implements Runnable{
@@ -31,6 +33,7 @@ public class TrafficSimulator implements Runnable{
     }
 
     // Inicia a simulação do semáforo.
+    @Override
     public void run() {
         while (!stop) {
             try {
@@ -44,6 +47,7 @@ public class TrafficSimulator implements Runnable{
                 case RED:
                     // RED por 12 segundos
                     Thread.sleep(12000); // Espera 12 segundos
+                    //solultion: Thread.sleep(color.delay);
                     break;
                 case GREEN:
                     Thread.sleep(10000); // VERDE Espera 10 segundos
@@ -84,10 +88,11 @@ public class TrafficSimulator implements Runnable{
     * Espera até uma mudança de sinal ocorrer.
     */
     synchronized void waitForChange() {
-        while (!changed) {
-            try {
+        try {
+            while (!changed) {
                 wait(); // Espera até que a cor mude
-                changed = false;
+            }
+            changed = false;
             } catch (InterruptedException exc) {
                 System.out.println("Thread interrupted: " + exc.getMessage());
             }
@@ -104,12 +109,10 @@ public class TrafficSimulator implements Runnable{
         synchronized void cancel() {
             stop = true; // Define a flag de parada como verdadeira
         }
-    }
+
     /**
      * Classe de demostracao
      */
-    /
-    public static class TrafficDemo {
         public static void main(String[] args) {
             TrafficSimulator ts = new TrafficSimulator(ColorEnum.GREEN);
             for (int i = 0; i < 9; i++) {
@@ -118,5 +121,6 @@ public class TrafficSimulator implements Runnable{
             }
             ts.cancel(); // Interrompe a simulação
         }
-    }
-}
+} // Fim da classe TrafficSimulator
+
+
