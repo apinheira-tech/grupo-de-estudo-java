@@ -12,7 +12,7 @@ Livro: Java para Iniciantes - Herbert Schildt
                Classe FlighSched que representa um voo com origem e destino genéricos.
                Utiliza Generics para permitir diferentes tipos de origem e destino.
  */
-public class FlighSched <T, U>  {
+public class FlighSched <T, U extends Number>  {
     private T origem;
     private U destino;
 
@@ -48,16 +48,22 @@ public class FlighSched <T, U>  {
 
     public static void main(String[] args) {
         // Exemplo de uso da classe FlighSched, como Generics
-        FlighSched<String, String> voo = new FlighSched<>("São Paulo", "Rio de Janeiro");
+        // FlighSched<String, String> voo = new FlighSched<>("São Paulo", "Rio de Janeiro");
+        FlighSched<String, Integer> voo = new FlighSched<>("GRU - São Paulo", 1130);
 
         System.out.println("Origem: " + voo.getOrigem());
         System.out.println("Destino: " + voo.getDestino());
 
-        voo.setDestino("Belo Horizonte");
-        System.out.println("Novo destino: " + voo.getDestino());
+        //voo.setDestino("Belo Horizonte");
+        //System.out.println("Novo destino: " + voo.getDestino());
 
-        voo.setDestino("Curitiba");
-        System.out.println("Destino 2: " + voo.getDestino());
+        //voo.setDestino("Curitiba");
+        //System.out.println("Destino 2: " + voo.getDestino());
+        voo.setDestino(1130);
+        System.out.println("Destino 1 alterado- Novo Destino: " + voo.getDestino());
+
+        voo.setOrigem("Belo Horizonte");
+        System.out.println("Origem alterada- Nova Origem: " + voo.getOrigem());
 
     }
 
