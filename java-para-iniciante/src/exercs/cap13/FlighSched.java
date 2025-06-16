@@ -1,5 +1,17 @@
 package exercs.cap13;
 
+/*
+ *
+@author: Simone, Ricardo e William (Grupo de Estudos sobre Java)
+@version: 1.0
+@since: 15/06/2025 (Dt de quando implementei essa classe no GE)
+@Artefato: FlighSched.java
+Atividades do capítulo 13 - Generics
+Livro: Java para Iniciantes - Herbert Schildt
+@description:  Implementação de uma classe genérica FlighSched que representa um voo com origem e destino.
+               Classe FlighSched que representa um voo com origem e destino genéricos.
+               Utiliza Generics para permitir diferentes tipos de origem e destino.
+ */
 public class FlighSched <T, U>  {
     private T origem;
     private U destino;
