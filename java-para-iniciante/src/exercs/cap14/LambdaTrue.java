@@ -11,7 +11,7 @@ public class LambdaTrue {
         /*
         Com IF
         */
-        Predicate<Integer> TrueLambda = n -> {
+        /*Predicate<Integer> TrueLambda = n -> {
             if (n >= 10 && n <= 20) {
                 System.out.println("O Retorno é true: n é maior ou igual a 10 e menor ou igual a 20");
                 return true;
@@ -22,7 +22,16 @@ public class LambdaTrue {
 
             }
         };
-        System.out.println("Testando a lógica com IF " + TrueLambda.test(2));
+        System.out.println("Testando a lógica com IF " + TrueLambda.test(2));*/
+
+        /*
+        Com Lambda
+         */
+        Predicate<Integer> entre10e20 =n -> n >= 10 && n <= 20;
+
+        // Testando a lógica com Lambda
+        System.out.println("Testando a lógica com Lambda " + entre10e20.test(15));
+        System.out.println("Testando a lógica com Lambda " + entre10e20.test(5));
     }
 
 
