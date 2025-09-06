@@ -4,7 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+ =====================
+######### STS ########
+# =====================
 .apt_generated
 .classpath
 .factorypath
@@ -13,13 +15,29 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# =====================
+#### IntelliJ IDEA ####
+# =====================
+.idea/
 *.iml
+*.iws
+out/
+*.log
 *.ipr
 
-### NetBeans ###
+###### MVN/WRAPPER #####
+.mvn/
+.mvnw/
+mvnw.cmd
+mvnw
+.mvn-wrapper/
+
+######### GIT #########
+.gitattributes
+
+# ======================
+####### NetBeans #######
+# ======================
 /nbproject/private/
 /nbbuild/
 /dist/
