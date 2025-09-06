@@ -34,12 +34,7 @@ out/
 
 ######### GIT #########
 # .gitattributes
-=======
-.mvn/
-.mvnw/
-mvnw.cmd
-mvnw
-.mvn-wrapper/
+
 
 ######### GIT #########
 .gitattributes
