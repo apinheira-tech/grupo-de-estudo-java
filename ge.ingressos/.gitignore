@@ -26,7 +26,6 @@ out/
 *.ipr
 
 ###### MVN/WRAPPER #####
-<<<<<<< HEAD
 # .mvn/
 # .mvnw/
 # mvnw.cmd
@@ -44,7 +43,7 @@ mvnw
 
 ######### GIT #########
 .gitattributes
->>>>>>> 7e838a34861fadada3fdce1ab80c828fdfc29cd7
+
 
 # ======================
 ####### NetBeans #######
