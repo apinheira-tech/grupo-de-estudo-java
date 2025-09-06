@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
- =====================
+# =====================
 ######### STS ########
 # =====================
 .apt_generated
@@ -24,18 +24,25 @@ target/
 out/
 *.log
 *.ipr
+mvnw
+mvnw.cmd
+.mvn/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
 
 ###### MVN/WRAPPER #####
-<<<<<<< HEAD
-# .mvn/
-# .mvnw/
-# mvnw.cmd
-# mvnw
-# .mvn-wrapper/
-
-######### GIT #########
-# .gitattributes
-=======
 .mvn/
 .mvnw/
 mvnw.cmd
@@ -44,7 +51,6 @@ mvnw
 
 ######### GIT #########
 .gitattributes
->>>>>>> 7e838a34861fadada3fdce1ab80c828fdfc29cd7
 
 # ======================
 ####### NetBeans #######
@@ -60,3 +66,4 @@ build/
 
 ### VS Code ###
 .vscode/
+
