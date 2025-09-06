@@ -1,17 +1,17 @@
-package ms.refagoracao.ge.ingressos.controllers;
+package ms.refatoracao.ge.ingressos.controllers;
 
 // src/main/java/ms/refagoracao/ge/ingressos/controllers/StatementController.java
 
-import ms.refagoracao.ge.ingressos.model.InvoiceDTO;
-import ms.refagoracao.ge.ingressos.model.PlayDTO;
-import ms.refagoracao.ge.ingressos.services.StatementService;
+import ms.refatoracao.ge.ingressos.model.entities.dto.InvoiceDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dto.PlayDTO;
+import ms.refatoracao.ge.ingressos.services.StatementService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/statement")
-public class StatementController {
+class StatementController {
 
     private final StatementService statementService;
 

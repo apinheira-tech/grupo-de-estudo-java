@@ -1,4 +1,4 @@
-package ms.refagoracao.ge.ingressos.model.entities;
+package ms.refatoracao.ge.ingressos.model.entities;
 
 
 import lombok.AllArgsConstructor;

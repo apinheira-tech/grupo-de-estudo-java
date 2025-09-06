@@ -1,4 +1,4 @@
-package ms.refagoracao.ge.ingressos.repositories;
+package ms.refatoracao.ge.ingressos.repositories;
 // src/main/java/ms/refagoracao/ge/ingressos/repository/InvoiceRepository.java
 
 import ms.refagoracao.ge.ingressos.model.Invoice;

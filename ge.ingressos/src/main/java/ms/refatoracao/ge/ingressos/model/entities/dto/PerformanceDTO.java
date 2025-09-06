@@ -1,4 +1,4 @@
-package ms.refagoracao.ge.ingressos.model.entities.dto;
+package ms.refatoracao.ge.ingressos.model.entities.dto;
 
 import lombok.Builder;
 import lombok.Data;
