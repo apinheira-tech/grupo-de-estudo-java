@@ -22,6 +22,7 @@ public class StatementService {
             var thisAmount = calculateAmount(play, perf.getAudience());
 
             // Soma créditos por volume
+            // 1 crédito por cada 10 espectadores acima de 30
             volumeCredits += Math.max(perf.getAudience() - 30, 0);
 
             // Crédito extra para comédia

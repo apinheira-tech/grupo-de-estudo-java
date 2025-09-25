@@ -85,10 +85,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
 				<configuration>
-                    <compilerArgs>
-                        <arg>--enable-native-access=ALL-UNNAMED</arg>
-                    </compilerArgs>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                   <!-- <compilerArgs>
+                        <arg>&#45;&#45;enable-native-access=ALL-UNNAMED</arg>
+                    </compilerArgs>-->
                     <annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
