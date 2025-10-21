@@ -19,6 +19,9 @@ public class StatementService {
 
         for (var perf : invoice.getPerformances()) {
             var play = plays.get(perf.getPlayID());
+            if (play == null) {
+                throw new IllegalArgumentException("Play não encontrado para o ID: " + perf.getPlayID());
+            }
             var thisAmount = calculateAmount(play, perf.getAudience());
 
             // Soma créditos por volume
