@@ -22,4 +22,5 @@ public class Usuario {
     public String getTipo() {
         return tipo;
     }
+    // refatorar usando lombok @Data @Builder
 }

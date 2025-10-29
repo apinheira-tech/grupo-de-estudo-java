@@ -35,6 +35,8 @@ public class GerenciadorUsuario {
             }
         }
         // REFATORAR Usando return user.stream()...
+        // REFATORAR e fazer os testes unitários
+
         return Optional.empty();
 
     // Método Refatorado (passar para classe futuramente, seguindo as
