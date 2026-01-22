@@ -19,8 +19,10 @@ public class StatementService {
 
         for (var perf : invoice.getPerformances()) {
             var play = plays.get(perf.getPlayID());
+            if (play != null) {
+                throw new IllegalArgumentException("Play ID não encontrado para o ID " + perf.getPlayID());
+            }
             var thisAmount = calculateAmount(play, perf.getAudience());
-
             // Soma créditos por volume
             // 1 crédito por cada 10 espectadores acima de 30
             volumeCredits += Math.max(perf.getAudience() - 30, 0);

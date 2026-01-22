@@ -4,6 +4,7 @@ package ms.refatoracao.ge.ingressos.controllers;
 
 import ms.refatoracao.ge.ingressos.model.entities.dto.InvoiceDTO;
 import ms.refatoracao.ge.ingressos.model.entities.dto.PlayDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dto.StatementRequestDTO;
 import ms.refatoracao.ge.ingressos.services.StatementService;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,8 +21,6 @@ class StatementController {
     }
 
     @PostMapping
-    public String getStatement(@RequestBody InvoiceDTO invoice,
-                               @RequestParam Map<String, PlayDTO> plays) {
-        return statementService.createStatement(invoice, plays);
-    }
+    public String getStatement(@RequestBody StatementRequestDTO request) {;
+        return statementService.createStatement(request.getInvoice(), request.getPlays());    }
 }
