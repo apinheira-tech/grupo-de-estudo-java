@@ -14,6 +14,12 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+// Testes do Repositório de Invoice
+// @DataJpaTest
+// @DisplayName("Testes do Repositório de Invoice")
+// @Author Simone, Ricardo (GE Refatoração)
+
 @DataJpaTest
 @DisplayName("Testes do Repositório de Invoice")
 class InvoiceRepositoryTest {
