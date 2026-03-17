@@ -9,4 +9,5 @@ import java.util.List;
 public class InvoiceDTO {
     private String customer;
     private List<PerformanceDTO> performances;
+    private Double orders;
 }
