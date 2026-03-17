@@ -19,10 +19,10 @@ public class StatementService {
 
         for (var perf : invoice.getPerformances()) {
             var play = plays.get(perf.getPlayID());
-            if (play != null) {
+            if (play == null) {
                 throw new IllegalArgumentException("Play ID não encontrado para o ID " + perf.getPlayID());
             }
-            var thisAmount = calculateAmount(play, perf.getAudience());
+            int amount = calculateAmount(play, perf.getAudience());
             // Soma créditos por volume
             // 1 crédito por cada 10 espectadores acima de 30
             volumeCredits += Math.max(perf.getAudience() - 30, 0);
@@ -34,16 +34,17 @@ public class StatementService {
 
             result.append(String.format(" %s: %s (%d seats)\n",
                     play.getName(),
-                    formatter.format(thisAmount / 100.0),
+                    formatter.format(amount / 100.0),
                     perf.getAudience()));
 
-            totalAmount += thisAmount;
+            totalAmount += amount;
         }
 
         result.append(String.format("O valor devido é: %s\n", formatter.format(totalAmount / 100.0)));
         result.append(String.format("Você ganhou %d creditos\n", volumeCredits));
 
         return result.toString();
+
     }
 
     private int calculateAmount(PlayDTO play, int audience) {
@@ -66,4 +67,19 @@ public class StatementService {
             default -> throw new IllegalArgumentException("Tipo desconhecido: " + play.getType());
         };
     }
+
+    private String outstand(InvoiceDTO invoice, Map<String, PlayDTO> plays) {
+        var outstanding = 0;
+        // calcula o valor a pagar (outstanding)
+        /*
+        // calcula o valor a pagar (outstanding)
+            for (const o of invoice.orders) {
+            outstanding += o.amount;
+            }
+         */
+      /*  for (int o : invoice.getOrders()) {
+            outstanding += o;
+        }*/
+    }
+
 }
