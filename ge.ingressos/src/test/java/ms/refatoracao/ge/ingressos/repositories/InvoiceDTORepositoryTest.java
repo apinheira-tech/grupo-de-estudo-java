@@ -1,7 +1,6 @@
 package ms.refatoracao.ge.ingressos.repositories;
 
-import ms.refatoracao.ge.ingressos.model.entities.Invoice;
-import ms.refatoracao.ge.ingressos.model.entities.Performance;
+import ms.refatoracao.ge.ingressos.model.entities.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @DisplayName("Testes do Repositório de Invoice")
-class InvoiceRepositoryTest {
+class InvoiceDTORepositoryTest {
 
 	@Autowired
 	private InvoiceRepository invoiceRepository;

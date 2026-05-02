@@ -18,5 +18,5 @@ public class Invoice {
     private String customer;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Performance> performances;
+    private List<Performance> performance;
 }

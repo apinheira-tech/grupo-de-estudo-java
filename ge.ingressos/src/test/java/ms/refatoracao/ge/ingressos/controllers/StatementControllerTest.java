@@ -1,16 +1,16 @@
 package ms.refatoracao.ge.ingressos.controllers;
 
-import ms.refatoracao.ge.ingressos.model.entities.dto.InvoiceDTO;
-import ms.refatoracao.ge.ingressos.model.entities.dto.PerformanceDTO;
-import ms.refatoracao.ge.ingressos.model.entities.dto.PlayDTO;
-import ms.refatoracao.ge.ingressos.model.entities.dto.StatementRequestDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dtos.InvoiceDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dtos.PerformanceDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dtos.PlayDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dtos.StatementRequestDTO;
 import ms.refatoracao.ge.ingressos.services.StatementService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.MockBean;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,24 +39,24 @@ class StatementControllerTest {
 
     @BeforeEach
     void setUp() {
-        PlayDTO play = PlayDTO.builder()
+        PlayDTO playDTO = PlayDTO.builder()
                 .name("Hamlet")
                 .type("tragedy")
                 .build();
 
-        PerformanceDTO performance = PerformanceDTO.builder()
+        PerformanceDTO performanceDTO = PerformanceDTO.builder()
                 .playID("hamlet")
                 .audience(55)
                 .build();
 
-        InvoiceDTO invoice = InvoiceDTO.builder()
+        InvoiceDTO invoiceDTO = InvoiceDTO.builder()
                 .customer("João Silva")
-                .performances(List.of(performance))
+                .performanceDTOS(List.of(performanceDTO))
                 .build();
 
         requestDTO = new StatementRequestDTO();
-        requestDTO.setInvoice(invoice);
-        requestDTO.setPlays(Map.of("hamlet", play));
+        requestDTO.setInvoice(invoiceDTO);
+        requestDTO.setPlays(Map.of("hamlet", playDTO));
     }
 
     @Test
@@ -105,18 +105,18 @@ class StatementControllerTest {
                 .type("comedy")
                 .build();
 
-        List<PerformanceDTO> performances = List.of(
+        List<PerformanceDTO> performanceDTOS = List.of(
                 PerformanceDTO.builder().playID("hamlet").audience(55).build(),
                 PerformanceDTO.builder().playID("comedy").audience(25).build()
         );
 
-        InvoiceDTO invoice = InvoiceDTO.builder()
+        InvoiceDTO invoiceDTO = InvoiceDTO.builder()
                 .customer("Cliente Multiplo")
-                .performances(performances)
+                .performanceDTOS(performanceDTOS)
                 .build();
 
         StatementRequestDTO multiRequest = new StatementRequestDTO();
-        multiRequest.setInvoice(invoice);
+        multiRequest.setInvoice(invoiceDTO);
         multiRequest.setPlays(Map.of(
                 "hamlet", tragedy,
                 "comedy", comedy

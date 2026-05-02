@@ -1,26 +1,26 @@
 package ms.refatoracao.ge.ingressos.controllers;
 
-// src/main/java/ms/refagoracao/ge/ingressos/controllers/StatementController.java
-
-import ms.refatoracao.ge.ingressos.model.entities.dto.InvoiceDTO;
-import ms.refatoracao.ge.ingressos.model.entities.dto.PlayDTO;
-import ms.refatoracao.ge.ingressos.model.entities.dto.StatementRequestDTO;
+import ms.refatoracao.ge.ingressos.model.entities.dtos.StatementRequestDTO;
 import ms.refatoracao.ge.ingressos.services.StatementService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/statement")
-class StatementController {
+public class StatementeController {
 
     private final StatementService statementService;
 
-    public StatementController(StatementService statementService) {
+    public StatementeController(StatementService statementService) {
         this.statementService = statementService;
     }
 
     @PostMapping
-    public String getStatement(@RequestBody StatementRequestDTO request) {;
-        return statementService.createStatement(request.getInvoice(), request.getPlays());    }
+    public ResponseEntity<String> getStatement(@Valid @RequestBody StatementRequestDTO request) {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(statementService.createStatement(request.getInvoice(), request.getPlays()));
+    }
 }
